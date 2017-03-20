@@ -8,12 +8,4 @@ public interface ParkingSlot {
     void setOccupant(Vehicle v);
     SlotType getSlotType();
     void freeSlot();
-
-    public Vehicle getOccupant();
-
-    public boolean isAvailable();
-
-    public void setOccupant(Vehicle v);
-
-    public SlotType getSlotType();
 }
