@@ -9,17 +9,14 @@ public class Person {
 
     private List<Vehicle> vehicles;
 
-    private Pass myPass;
-
     public Pass getPass() {
     return this.pass;
     }
 
-    public Person(Pass pass, String name, List<Vehicle> vehicles, Pass myPass) {
+    public Person(Pass pass, String name, List<Vehicle> vehicles) {
         this.pass = pass;
         this.name = name;
         this.vehicles = vehicles;
-        this.myPass = myPass;
     }
 
     public void setPass(Pass pass) {
@@ -42,15 +39,7 @@ public class Person {
     public void setVehicles(List<Vehicle> vehicles) {
         this.vehicles = vehicles;
     }
-
-    public Pass getMyPass() {
-        return myPass;
-    }
-
-    public void setMyPass(Pass myPass) {
-        this.myPass = myPass;
-    }
-
+    
     public void addVehicle(Vehicle vehicle){
         this.vehicles.add(vehicle);
     }
