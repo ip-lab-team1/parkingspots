@@ -15,6 +15,7 @@ public class Vehicle {
         return owner;
     }
 
+    
     public String getVehicleType() {
         return vehicleType;
     }
