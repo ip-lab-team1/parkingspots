@@ -30,6 +30,7 @@ public SlotType slotType;
 
     @Override
     public void freeSlot() {
+        this.occupant = null;
         this.availability = true;
     }
 }
