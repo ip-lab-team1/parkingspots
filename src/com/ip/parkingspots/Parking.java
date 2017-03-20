@@ -1,34 +1,38 @@
 package com.ip.parkingspots;
 
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Parking {
+    private static Parking instance;
+    public static Parking getInstance() {
+        if (instance == null){
+            instance = new Parking();
+        }
+        return instance;
+    }
 
-  private Parking pariking;
+    private void Parking() {
+        parkingSlots = new ArrayList<>();
+        valets = new ArrayList<>();
+    }
 
-  public List<ParkingSlot> parkingSlots;
+    private List<ParkingSlot> parkingSlots;
+    private List<Valet> valets;
 
-    /**
-   * 
-   * @element-type ParkingSlot
-   */
-  public Vector  myParkingSlot;
-    public Vector  myValet;
-    public Vector  myValet;
-    public Vector  myValet;
-    public Vector  myParkingSlot;
 
-  private void Parking() {
-  }
+    public List<ParkingSlot> getAvailableSlots(SlotType s) {
+        ArrayList<ParkingSlot> result = new ArrayList<>();
+        for (ParkingSlot slot : parkingSlots){
+            if (slot.getSlotType().equals(s)){
+                result.add(slot);
+            }
+        }
 
-  public Parking getInstance() {
-  return null;
-  }
+        return result;
+    }
 
-  public List<ParkingSlot> getAvailableSlots(SlotType s) {
-  return null;
-  }
-
+    ParkingSlot parkCar()
 }

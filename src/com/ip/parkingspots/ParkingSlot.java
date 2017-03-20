@@ -3,15 +3,17 @@ import java.util.Vector;
 
 public interface ParkingSlot {
 
-    public Vector  myParking;
-    public Vector  myParking;
+    Vehicle getOccupant();
+    boolean isAvailable();
+    void setOccupant(Vehicle v);
+    SlotType getSlotType();
+    void freeSlot();
 
-  public Vehicle getOccupant();
+    public Vehicle getOccupant();
 
-  public boolean isAvailable();
+    public boolean isAvailable();
 
-  public void setOccupant(Vehicle v);
+    public void setOccupant(Vehicle v);
 
-  public SlotType getSlotType();
-
+    public SlotType getSlotType();
 }
