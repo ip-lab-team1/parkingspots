@@ -39,7 +39,7 @@ public class Person {
     public void setVehicles(List<Vehicle> vehicles) {
         this.vehicles = vehicles;
     }
-    
+
     public void addVehicle(Vehicle vehicle){
         this.vehicles.add(vehicle);
     }

@@ -7,6 +7,11 @@ public class Pass {
 
     private SlotType type;
 
+    public Pass(int price, SlotType type) {
+        this.price = price;
+        this.type = type;
+    }
+
     public int getPrice() {
         return price;
     }
