@@ -1,20 +1,23 @@
+package com.ip.parkingspots;
+
+import java.util.UUID;
 import java.util.Vector;
 
 public class SlotType {
 
-  public Integer price;
+    public Integer price;
 
-  public UUID id;
+    public UUID id;
 
     /**
-   * 
-   * @element-type AbstractParkingSlot
-   */
-  public Vector  myAbstractParkingSlot;
+    *
+    * @element-type AbstractParkingSlot
+    */
+    public Vector  myAbstractParkingSlot;
     /**
-   * 
-   * @element-type Pass
-   */
-  public Vector  myPass;
+    *
+    * @element-type Pass
+    */
+    public Vector  myPass;
 
 }

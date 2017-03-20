@@ -1,3 +1,4 @@
+package com.ip.parkingspots;
 import java.util.Vector;
 
 public interface ParkingSlot {

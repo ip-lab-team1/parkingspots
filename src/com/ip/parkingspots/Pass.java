@@ -1,3 +1,6 @@
+package com.ip.parkingspots;
+
+
 public class Pass {
 
   public Integer price;

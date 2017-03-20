@@ -1,8 +1,8 @@
+package com.ip.parkingspots;
+
+
 public class Vehicle {
 
-  public Person owner;
-
-    public Person myPerson;
-    public Valet myValet;
+    public Person owner;
 
 }
