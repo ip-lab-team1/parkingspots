@@ -26,7 +26,7 @@ public class Parking {
     public List<ParkingSlot> getAvailableSlots(SlotType s) {
         ArrayList<ParkingSlot> result = new ArrayList<>();
         for (ParkingSlot slot : parkingSlots){
-            if (slot.getSlotType().equals(s)){
+            if (slot.getSlotType().equals(s) && slot.isAvailable()){
                 result.add(slot);
             }
         }
@@ -34,5 +34,35 @@ public class Parking {
         return result;
     }
 
-    ParkingSlot parkCar()
+    ParkingSlot parkVehicle(Vehicle vehicle){
+        Pass ownerPass = vehicle.getOwner().getPass();
+        SlotType passType = ownerPass.getSlotType();
+        List<ParkingSlot> slots = getAvailableSlots(passType);
+
+        if (slots.size() == 0){
+            return null;
+        }
+
+        ParkingSlot targetSlot = slots.get(0);
+        for (Valet valet : valets){
+            if (valet.isAvailable()){
+                valet.pickupVehicle(vehicle);
+                valet.parkVehicle(targetSlot);
+                return targetSlot;
+            }
+        }
+
+        return null;
+    }
+
+    Vehicle unparkVehicle(ParkingSlot slot){
+        for (Valet valet : valets){
+            if (valet.isAvailable()){
+                valet.unparkVehicle(slot);
+                return valet.dropoffVehicle();
+            }
+        }
+
+        return null;
+    }
 }

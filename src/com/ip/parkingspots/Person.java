@@ -1,4 +1,5 @@
 package com.ip.parkingspots;
+import java.util.List;
 import java.util.Vector;
 
 public class Person {
@@ -19,8 +20,8 @@ public class Person {
     public Vector  myPersonDb;
     public Vector  myPersonDb;
 
-    public pass getPass() {
-    return null;
+    public Pass getPass() {
+        return null;
     }
 
 }
