@@ -2,16 +2,12 @@ package com.ip.parkingspots;
 import java.util.Vector;
 
 public interface ParkingSlot {
+    public Vehicle getOccupant();
 
-    public Vector  myParking;
-    public Vector  myParking;
+    public boolean isAvailable();
 
-  public Vehicle getOccupant();
+    public void setOccupant(Vehicle v);
 
-  public boolean isAvailable();
-
-  public void setOccupant(Vehicle v);
-
-  public SlotType getSlotType();
+    public SlotType getSlotType();
 
 }
