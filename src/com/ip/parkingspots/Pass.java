@@ -3,14 +3,20 @@ package com.ip.parkingspots;
 
 public class Pass {
 
-  public Integer price;
+    private int price;
 
-  public SlotType type;
+    private SlotType type;
 
-    public SlotType mySlotType;
-    public Person myPerson;
+    public Pass(int price, SlotType type) {
+        this.price = price;
+        this.type = type;
+    }
 
-  public void getPrice() {
-  }
+    public int getPrice() {
+        return price;
+    }
 
+    public SlotType getSlotType() {
+        return type;
+    }
 }
