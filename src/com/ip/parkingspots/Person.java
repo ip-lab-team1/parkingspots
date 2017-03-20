@@ -1,27 +1,57 @@
 package com.ip.parkingspots;
 import java.util.List;
-import java.util.Vector;
 
 public class Person {
 
-    public Pass pass;
+    private Pass pass;
 
-    public String name;
+    private String name;
 
-    public List<Vehicle> vehicles;
+    private List<Vehicle> vehicles;
 
-    public Pass myPass;
-    /**
-    *
-    * @element-type Vehicle
-    */
-    public Vector  myVehicle;
-    public Vector  myPersonDb;
-    public Vector  myPersonDb;
-    public Vector  myPersonDb;
+    private Pass myPass;
 
     public Pass getPass() {
-        return null;
+    return this.pass;
     }
 
+    public Person(Pass pass, String name, List<Vehicle> vehicles, Pass myPass) {
+        this.pass = pass;
+        this.name = name;
+        this.vehicles = vehicles;
+        this.myPass = myPass;
+    }
+
+    public void setPass(Pass pass) {
+
+        this.pass = pass;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
+
+    public Pass getMyPass() {
+        return myPass;
+    }
+
+    public void setMyPass(Pass myPass) {
+        this.myPass = myPass;
+    }
+
+    public void addVehicle(Vehicle vehicle){
+        this.vehicles.add(vehicle);
+    }
 }
